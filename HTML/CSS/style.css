@@ -1,0 +1,151 @@
+body {
+    font-family: 'Source code Pro', inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    width: 100%;
+    background-image: linear-gradient(to right, #173753, #1B4353, #1D70A2, #6DAEDB);
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    padding: 20px 30px;
+    color: white;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav ul li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+.sous_menu {
+    display: none;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li:hover .sous_menu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.sous_menu li {
+    border-bottom: 1px solid #6DAEDB;
+    padding: 15px 30px;
+    font-size: 13px;
+    color: black;
+    width: 270px;
+}
+
+.sous_menu li a {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: white;
+    width: 270px;
+}
+
+.menu_accueil:hover,
+.menu_batiments:hover,
+.menu_contactez:hover {
+    border-top: 5px solid #1D70A2;
+}
+
+.menu_batiments .sous_menu {
+    background-color: #1B4353;
+}
+
+.sous_menu li:hover a {
+    color: black;
+    font-weight: bold;
+}
+.menu_batiments .sous_menu li:hover {
+    background-color: #6DAEDB;
+}
+
+#page_accueil {
+    background-image: url("https://www.stemarieduport.fr/wp-content/uploads/2020/01/smdp-header-home.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.20px;
+}
+
+#page_accueil h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5em;
+    color: #1D70A2;
+    text-shadow: 0 4px 0 whitesmoke;
+    animation: apparition 1s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#page_accueil p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: goldenrod;
+    text-shadow: 0 3px 0 whitesmoke;
+    animation: apparition2 1s ease-out;
+}
+
+@keyframes apparition2 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+footer {
+    background-color: black;
+    display: flex;
+}
+
+footer h1 {
+    color: white;
+}
